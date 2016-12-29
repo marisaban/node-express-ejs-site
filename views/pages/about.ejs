@@ -1,0 +1,28 @@
+<%- contentFor('hero') %>
+
+	<section class="hero">
+		<div class="hero-content">
+			<h2>About us</h2>
+
+			<a href="#" class="btn btn-lg btn-primary">Get Started</a>
+
+			<a href="/contact" class="btn btn-lg btn-primary">Get Started</a>
+
+		</div>
+	</section>
+
+<%- contentFor('body') %>
+<div class="jumbotron text-center">
+	<h1>The Team </h1>
+
+	<div class="row">
+		<!-- Use EJS template syntax to print out the users -->
+		<% for (user of users) { %>
+			<div class="col-sm-3">
+				<h2> <%= user.name %> </h2>
+				<img src="<%= user.avatar %>" alt="" class="img-responsive">
+
+			</div>
+		<% } %>
+	</div>
+</div>
